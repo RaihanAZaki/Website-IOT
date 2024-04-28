@@ -33,7 +33,7 @@ function TabelPerangkat() {
             </div>
             <div className='p-2'>
               <table className=''>
-                <tr className='text-center text-sm border-2 border-b-DarkPurple '>
+                <tr className='text-center text-xs md:text-sm border-2 border-b-DarkPurple '>
                   <th className='px-2 py-2 w-12 '> No </th>
                   <th className='px-2 py-2 w-36'> Kode Perangkat </th>
                   <th className='px-2 py-2 w-36'> Nama Perangkat </th>
@@ -41,7 +41,7 @@ function TabelPerangkat() {
                   <th className='px-2 py-2 w-36'> status </th>
                 </tr>
                 {Data.map((data, index) => ( 
-                <tr key={index} className='text-center text-sm border-2 border-b-DarkPurple '>
+                <tr key={index} className='text-center text-xs md:text-sm border-2 border-b-DarkPurple '>
                   <td className='px-2 py-2 w-12 '> {data.no} </td>
                   <td className='px-2 py-2 w-36'> {data.kode} </td>
                   <td className='px-2 py-2 w-36'> {data.nama} </td>

@@ -19,7 +19,7 @@ function TabelKeruh() {
       no: 3,
       tanggal: "27/04/2024",
       nilai: "450",
-      tingkat: "Sedang ( Tetap Waspada!! )"
+      tingkat: "Sedang ( Tetap Waspada! )"
     },
     {
       no: 4,

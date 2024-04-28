@@ -46,7 +46,7 @@ function TabelPerangkat() {
                   <td className='px-2 py-2 w-36'> {data.kode} </td>
                   <td className='px-2 py-2 w-36'> {data.nama} </td>
                   <td className='px-2 py-2 w-24 items-center hidden md:block justify-center'> <img src={data.gambar} className='w-10 h-10' alt="Gambar" /> </td>
-                  <td className="px-2 py-2 w-36"><p className={`${data.status === 0 ? 'bg-red-600' : data.status === 1 ? 'bg-green-600' : ''} text-white p-2 rounded-md text-xs`}> {data.status === 1 ? 'Aktif' : 'Tidak Aktif'} </p> </td>
+                  <td className="px-2 py-2 w-36"><p className={`${data.status === 0 ? 'bg-red-600' : data.status === 1 ? 'bg-green-600' : ''} text-white p-1 md:p-2 rounded-md text-xs`}> {data.status === 1 ? 'Aktif' : 'Tidak Aktif'} </p> </td>
                 </tr>
               ))}
               </table>

@@ -42,14 +42,14 @@ function TabelKeruh() {
             </div>
             <div className='p-2'>
               <table className=''>
-                <tr className='text-center text-sm border-2 border-b-DarkPurple'>
+                <tr className='text-center text-xs md:text-sm border-2 border-b-DarkPurple'>
                   <th className='px-2 py-2 w-16'> No </th>
                   <th className='px-2 py-2 w-36'> Tanggal </th>
                   <th className='px-2 py-2 w-36'> Nilai </th>
                   <th className='px-2 py-2 w-96'> Tingkat Keruh </th>
                 </tr>
                 {Data.map((data, index) => ( 
-                <tr key={index} className='text-center text-sm border-2 border-b-DarkPurple'>
+                <tr key={index} className='text-center text-xs md:text-sm border-2 border-b-DarkPurple'>
                   <td className='px-2 py-2 w-16'> {data.no} </td>
                   <td className='px-2 py-2 w-36'> {data.tanggal} </td>
                   <td className='px-2 py-2 w-36'> {data.nilai} </td>

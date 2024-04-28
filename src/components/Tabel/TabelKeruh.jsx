@@ -7,31 +7,31 @@ function TabelKeruh() {
       no: 1,
       tanggal: "25/04/2024",
       nilai: "250",
-      tingkat: "Normal ( Air Bersih )"
+      tingkat: "Normal"
     },
     {
       no: 2,
       tanggal: "26/04/2024",
       nilai: "270",
-      tingkat: "Normal ( Air Bersih )"
+      tingkat: "Normal"
     },
     {
       no: 3,
       tanggal: "27/04/2024",
       nilai: "450",
-      tingkat: "Sedang ( Tetap Waspada! )"
+      tingkat: "Sedang"
     },
     {
       no: 4,
       tanggal: "28/04/2024",
       nilai: "750",
-      tingkat: "Tinggi ( Mesin  Bergerak )"
+      tingkat: "Tinggi"
     },
     {
       no: 5,
       tanggal: "29/04/2024",
       nilai: "782",
-      tingkat: "Tinggi ( Mesin  Bergerak )"
+      tingkat: "Tinggi"
     },
   ]
   return (

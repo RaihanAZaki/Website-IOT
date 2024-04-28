@@ -91,8 +91,6 @@ const chartConfig = {
  
 export default function ChartKekeruhan() {
   return (
-    <Card className="">
-        <Chart {...chartConfig} />
-    </Card>
+     <Chart {...chartConfig} />
   );
 }

@@ -19,7 +19,7 @@ function App() {
             <CardGrafik />
             <CardCamera />
           </div>
-          <div className="md:grid grid-cols-2 gap-4">
+          <div className="md:grid grid-cols-2 gap-4 mb-4">
             <TabelKeruh/>
             <TabelPerangkat/>
           </div>

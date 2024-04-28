@@ -5,6 +5,7 @@ import SidebarMenu from "./components/Sidebar/SidebarMenu";
 import CardGrafik from "./components/Cards/CardGrafik";
 import CardCamera from "./components/Cards/CardCamera";
 import TabelKeruh from "./components/Tabel/TabelKeruh";
+import TabelPerangkat from "./components/Tabel/TabelPerangkat";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +21,7 @@ function App() {
           </div>
           <div className="md:grid grid-cols-2 gap-4">
             <TabelKeruh/>
-            <TabelKeruh/>
+            <TabelPerangkat/>
           </div>
         </div>
       </Layouts>

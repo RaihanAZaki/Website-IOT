@@ -7,6 +7,69 @@ const fetchTest = async () => {
     return response.jarak;
   };
 
+  const Data = [
+    {
+      no: 1,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "263",
+    },
+    {
+      no: 2,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "288",
+    },
+    {
+      no: 3,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "264",
+    },
+    {
+      no: 4,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "1184",
+    },
+    {
+      no: 5,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "288",
+    },
+    {
+      no: 6,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "1184",
+    },
+    {
+      no: 7,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "48",
+    },
+    {
+      no: 8,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "18",
+    },
+    {
+      no: 9,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "192",
+    },
+    {
+      no: 10,
+      kode: "KP-A01",
+      tanggal: "2024-04-29",
+      jarak: "8",
+    },
+  ]
+
 function TabelDesign() {
     const { isLoading, isError, isSuccess, data } = useQuery({
         queryKey: ["features"],
@@ -19,15 +82,15 @@ function TabelDesign() {
     const rowsLimit = 5; // Mengatur jumlah maksimal data per halaman menjadi 5
     const [currentPage, setCurrentPage] = useState(0);
   
-    const totalPage = useMemo(() => Math.ceil(data.length / rowsLimit), [
-      data,
+    const totalPage = useMemo(() => Math.ceil(Data.length / rowsLimit), [
+      Data,
       rowsLimit,
     ]);
   
     const rowsToShow = useMemo(() => {
       const startIndex = currentPage * rowsLimit;
-      return data?.slice(startIndex, startIndex + rowsLimit);
-    }, [currentPage, data, rowsLimit]);
+      return Data?.slice(startIndex, startIndex + rowsLimit);
+    }, [currentPage, Data, rowsLimit]);
   
     const nextPage = () => {
       setCurrentPage((prevPage) => prevPage + 1);
@@ -64,7 +127,7 @@ function TabelDesign() {
                      Tanggal
                     </th>
                     <th className="py-3 px-5 text-left border border-b">
-                      Kode Perangkat
+                      Kode
                     </th>
                     <th className="py-3 px-5 text-left border border-t rounded-bl-lg sm:rounded-none">
                       Jarak
@@ -76,13 +139,13 @@ function TabelDesign() {
                 {rowsToShow?.map((data, index) => (
                   <tr className="flex flex-col sm:table-row mb-2 sm:mb-0" key={index}>
                     <td className="border hover:bg-[#222E3A]/[6%] hover:sm:bg-transparent py-3 px-5">
-                      {data?.id}
+                      {data?.no}
                     </td>
                     <td className="border hover:bg-[#222E3A]/[6%]  hover:sm:bg-transparent py-3 px-5">
                       {data?.tanggal}
                     </td>
                     <td className="border hover:bg-[#222E3A]/[6%]  hover:sm:bg-transparent py-3 px-5">
-                      {data?.kode_perangkat}
+                      {data?.kode}
                     </td>
                     <td className="border hover:bg-[#222E3A]/[6%]  hover:sm:bg-transparent py-3 px-5 cursor-pointer">
                       {data?.jarak}

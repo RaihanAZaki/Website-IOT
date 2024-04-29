@@ -90,7 +90,7 @@ function TabelPerangkat() {
                       {data?.nama}
                     </td>
                     <td className="border hover:bg-[#222E3A]/[6%]  hover:sm:bg-transparent py-3 px-5 cursor-pointer">
-                      {data.status === 1 ? 'Aktif' : 'Tidak Aktif'}
+                      {data.status === 1 ? 'Aktif' : 'Tidak'}
                     </td>
                   </tr>
                 ))}

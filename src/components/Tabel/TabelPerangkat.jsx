@@ -34,14 +34,14 @@ function TabelPerangkat() {
     {
       no: 5,
       kode: "KP-C03",
-      nama: "Pompa Air",
+      nama: "Pompa",
       gambar: "../assets/image/kamera.png",
       status: 1,
     },
     {
       no: 6,
       kode: "KP-D01",
-      nama: "Kran Otomatis",
+      nama: "Kran",
       gambar: "../assets/image/kamera.png",
       status: 0,
     },

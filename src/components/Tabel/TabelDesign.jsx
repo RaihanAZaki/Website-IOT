@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 
-const fetchTest = async () => {
-    const api = await fetch("http://localhost:3232/sensor/jarak?limit=10");
-    const response = await api.json();
-    return response.jarak;
-  };
+// const fetchTest = async () => {
+//     const api = await fetch("http://localhost:3232/sensor/jarak?limit=10");
+//     const response = await api.json();
+//     return response.jarak;
+//   };
 
   const Data = [
     {
@@ -71,13 +71,13 @@ const fetchTest = async () => {
   ]
 
 function TabelDesign() {
-    const { isLoading, isError, isSuccess, data } = useQuery({
-        queryKey: ["features"],
-        queryFn: fetchTest,
-      });
+    // const { isLoading, isError, isSuccess, data } = useQuery({
+    //     queryKey: ["features"],
+    //     queryFn: fetchTest,
+    //   });
     
-    if (isError) return <div> error... </div>;
-    if (isLoading) return <div> loading... </div>;
+    // if (isError) return <div> error... </div>;
+    // if (isLoading) return <div> loading... </div>;
 
     const rowsLimit = 5; // Mengatur jumlah maksimal data per halaman menjadi 5
     const [currentPage, setCurrentPage] = useState(0);

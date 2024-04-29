@@ -66,13 +66,13 @@ function TabelPerangkat() {
                       ID
                     </th>
                     <th className="py-3 px-5 text-left border border-b">
-                     Kode Perangkat
+                     Kode
                     </th>
                     <th className="py-3 px-5 text-left border border-b">
-                      Nama Perangkat
+                      Nama
                     </th>
                     <th className="py-3 px-5 text-left border border-t rounded-bl-lg sm:rounded-none">
-                      Status Perangkat
+                      Status
                     </th>
                   </tr>
                 ))}

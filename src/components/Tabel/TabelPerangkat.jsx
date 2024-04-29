@@ -24,34 +24,81 @@ function TabelPerangkat() {
       gambar: "../assets/image/kamera.png",
       status: 0,
     },
+    {
+      no: 4,
+      kode: "KP-C02",
+      nama: "Motor DC",
+      gambar: "../assets/image/turbidity.png",
+      status: 1,
+    },
+    {
+      no: 5,
+      kode: "KP-C03",
+      nama: "Pompa Air",
+      gambar: "../assets/image/kamera.png",
+      status: 1,
+    },
+    {
+      no: 6,
+      kode: "KP-D01",
+      nama: "Kran Otomatis",
+      gambar: "../assets/image/kamera.png",
+      status: 0,
+    },
   ]
   return (
-    <div className='col-span-1 pt-8 '>
-        <div className='rounded-md border-2 border-DarkPurple p-4 w-full'>
-            <div className='flex justify-center'>
-                <h1 className='text-DarkPurple font-bold text-lg md:text-xl mb-4'>Tabel Perangkat</h1>
-            </div>
-            <div className='p-2'>
-              <table className=''>
-                <tr className='text-center text-xs md:text-sm border-2 border-b-DarkPurple '>
-                  <th className='px-1 md:px-2 py-2 w-12 '> No </th>
-                  <th className='px-1 md:px-2 py-2 w-36'> Kode Perangkat </th>
-                  <th className='px-1 md:px-2 py-2 w-48'> Nama Perangkat </th>
-                  <th className='px-1 md:px-2 py-2 w-24 hidden md:block'> Gambar </th>
-                  <th className='px-1 md:px-2 py-2 w-36'> Status </th>
-                </tr>
-                {Data.map((data, index) => ( 
-                <tr key={index} className='text-center text-xs md:text-sm border-2 border-b-DarkPurple '>
-                  <td className='px-1 md:px-2 py-2 w-12 '> {data.no} </td>
-                  <td className='px-1 md:px-2 py-2 w-36'> {data.kode} </td>
-                  <td className='px-1 md:px-2 py-2 w-48'> {data.nama} </td>
-                  <td className='px-1 md:px-2 py-2 w-24 items-center hidden md:block justify-center'> <img src={data.gambar} className='w-10 h-10' alt="Gambar" /> </td>
-                  <td className="px-1 md:px-2 py-2 w-36"><p className={`${data.status === 0 ? 'bg-red-600' : data.status === 1 ? 'bg-green-600' : ''} text-white p-1 rounded-md text-xs`}> {data.status === 1 ? 'Aktif' : 'Tidak Aktif'} </p> </td>
-                </tr>
-              ))}
-              </table>
-            </div>
+    <div className="flex flex-col justify-center h-full pt-4">
+      <div className="w-full sm:max-w-2xl md:max-w-full mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+        <header className="px-5 py-4 border-b border-gray-100">
+          <h2 className="font-semibold text-gray-800">Tabel Perangkat</h2>
+        </header>
+        <div className="p-3">
+          <div className="overflow-x-auto">
+            <table className="sm:inline-table w-full flex flex-row sm:bg-white  overflow-hidden">
+              <thead className="sm:text-xs text-sm font-semibold uppercase text-gray-400 bg-gray-50">
+                {Data?.map((data, index) => (
+                  <tr
+                    className={`bg-[#222E3A]/[6%] flex flex-col sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0 ${
+                      index == 0 ? "sm:flex" : "sm:hidden"
+                    }`}
+                  >
+                    <th className="py-3 px-5 text-left border border-b rounded-tl-lg sm:rounded-none">
+                      ID
+                    </th>
+                    <th className="py-3 px-5 text-left border border-b">
+                     Kode Perangkat
+                    </th>
+                    <th className="py-3 px-5 text-left border border-b">
+                      Nama Perangkat
+                    </th>
+                    <th className="py-3 px-5 text-left border border-t rounded-bl-lg sm:rounded-none">
+                      Status Perangkat
+                    </th>
+                  </tr>
+                ))}
+              </thead>
+              <tbody className="sm:text-xs text-sm flex-1 sm:flex-none">
+                {Data?.map((data, index) => (
+                  <tr className="flex flex-col sm:table-row mb-2 sm:mb-0" key={index}>
+                    <td className="border hover:bg-[#222E3A]/[6%] hover:sm:bg-transparent py-3 px-5">
+                      {data?.no}
+                    </td>
+                    <td className="border hover:bg-[#222E3A]/[6%]  hover:sm:bg-transparent py-3 px-5">
+                      {data?.kode}
+                    </td>
+                    <td className="border hover:bg-[#222E3A]/[6%]  hover:sm:bg-transparent py-3 px-5">
+                      {data?.nama}
+                    </td>
+                    <td className="border hover:bg-[#222E3A]/[6%]  hover:sm:bg-transparent py-3 px-5 cursor-pointer">
+                      {data.status === 1 ? 'Aktif' : 'Tidak Aktif'}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </div>
   )
 }

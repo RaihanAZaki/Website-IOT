@@ -82,7 +82,7 @@ function App() {
         <div className="w-full px-8">
           <div className="md:grid grid-cols-3 gap-4">
             <CardGrafik2 />
-            <CardCamera2 />
+            <CardCamera />
           </div>
           <div className="md:grid grid-cols-2 gap-4 mb-8">
             <TabelPerangkat/>

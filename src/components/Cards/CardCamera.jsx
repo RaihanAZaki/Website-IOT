@@ -9,7 +9,7 @@ function CardCamera() {
           <h2 className="font-semibold text-gray-800">Live Camera</h2>
         </header>
         <div className="p-3 h-full overflow-hidden">
-          <iframe src="http://192.168.1.200:81/stream" frameborder="0" className='w-full h-full max-h-[215px] overflow-visible'></iframe>
+          <iframe src="http://127.0.0.1:5000/" frameborder="0" className='w-full h-full max-h-[215px] overflow-visible'></iframe>
         </div>
       </div>
     </div>

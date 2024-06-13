@@ -14,22 +14,26 @@ function SidebarMenu() {
     {
       title: "Dashboard",
       icon: <RiDashboardFill />,
-      tooltip: "Dashboard"
+      tooltip: "Dashboard",
+      href: "/"
     },
     {
       title: "Grafik",
       icon: <RiBarChartBoxFill />,
-      tooltip: "Grafik"
+      tooltip: "Grafik",
+      href: "/grafik"
     },
     {
       title: "Tabel",
       icon: <RiDatabaseFill />,
-      tooltip: "Tabel"
+      tooltip: "Tabel",
+      href: "/tabel"
     },
     {
       title: "Camera",
       icon: <RiCameraFill />,
-      tooltip: "Camera"
+      tooltip: "Camera",
+      href: "/kamera"
     },
   ]
   
@@ -44,7 +48,7 @@ function SidebarMenu() {
             {/* LOGO  */}
             <div className='inline-flex items-center'>
                 <IoWaterOutline className='text-4xl text-white rounded cursor-pointer block float-left mr-2'/>
-                <h1 className={`text-white font-medium text-2xl duration-300 hidden md:block ${!open && "md:hidden"}`}>WaterTank</h1>
+                <h1 className={`text-white font-medium text-2xl duration-300 hidden md:block ${!open && "md:hidden"}`}>TorenKu</h1>
             </div>
 
             {/* SearchBar */}
@@ -70,17 +74,19 @@ function SidebarMenu() {
                       animation="fade"
                       className="sm:block md:hidden "
                     >
+                      <a href={menu.href} className="flex items-center gap-x-4 cursor-pointer hover:bg-LightWhite p-2 rounded-md mt-5">
                         <li 
                           key={index}
-                          className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-LightWhite rounded-md mt-5`}
+                          className={`text-gray-300 text-sm flex items-center `}
                         >
-                            <span className='text-2xl block float-left'>
+                            <span className='text-2xl block float-left mr-2'>
                                 {menu.icon}
                             </span>
                             <span className={`text-base font-medium flex-1 duration-200 hidden md:block ${!open && "md:hidden"}`}>
                                 {menu.title}
                             </span>
                         </li>
+                      </a>
                     </Tooltip>
                 ))}
             </ul>

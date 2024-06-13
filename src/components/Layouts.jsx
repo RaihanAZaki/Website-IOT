@@ -1,4 +1,5 @@
 import React from 'react'
+import SidebarMenu from './Sidebar/SidebarMenu'
 
 function Layouts({ children }) {
   return (

@@ -1,16 +1,17 @@
-import { Card } from "@material-tailwind/react";
+import { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
  
 const chartConfig = {
   type: "bar",
-  height: 200,
+  height: 235,
   series: [
     {
-      name: "Sales",
-      data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+      name: "Keruh",
+      series: [{ data: [] }],
     },
   ],
   options: {
+    xaxis: { categories: [] },
     chart: {
       toolbar: {
         show: false,
@@ -22,7 +23,7 @@ const chartConfig = {
     dataLabels: {
       enabled: false,
     },
-    colors: ["#081A51"],
+    colors: ["#5ca4a9"],
     plotOptions: {
       bar: {
         columnWidth: "40%",
@@ -90,7 +91,34 @@ const chartConfig = {
 };
  
 export default function ChartKekeruhan() {
-  return (
-     <Chart {...chartConfig} />
-  );
+  const [chartData, setChartData] = useState(chartConfig);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "http://localhost/esprehang/api/api.php/turbidity?limit=10"
+        );
+        const data = await response.json();
+
+        const tanggal = data.map((entry) => entry.tanggal.slice(0, 10)); // Ambil hanya tanggal
+        const nilai_jarak = data.map((entry) => entry.nilai_keruh);
+
+        setChartData({
+          ...chartConfig,
+          series: [{ data: nilai_jarak }],
+          options: {
+            ...chartConfig.options,
+            xaxis: { categories: tanggal },
+          },
+        });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return <Chart {...chartData} />;
 }

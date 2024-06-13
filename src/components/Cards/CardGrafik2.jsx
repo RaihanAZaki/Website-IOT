@@ -1,5 +1,5 @@
 import React from "react";
-import ChartKekeruhan from "../Chart/ChartKekeruhan";
+import ChartJarak from "../Chart/ChartJarak";
 
 
 function CardGrafik2() {
@@ -10,7 +10,7 @@ function CardGrafik2() {
           <h2 className="font-semibold text-gray-800">Grafik Jarak</h2>
         </header>
         <div className="p-3">
-            <ChartKekeruhan />
+            <ChartJarak />
         </div>
       </div>
     </div>

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// App.jsx
-import React from 'react';
-import Layouts from './components/Layouts';
-import RoutesPage from './routes';
-import SidebarMenu from './components/Sidebar/SidebarMenu';
-=======
 import React from "react";
 import {QueryClientProvider, QueryClient} from "@tanstack/react-query"
 import Layouts from "./components/Layouts";
@@ -14,19 +7,10 @@ import CardCamera from "./components/Cards/CardCamera";
 import TabelUltrasonic from "./components/Tabel/TabelPerangkat";
 import TabelDesign from "./components/Tabel/TabelDesign";
 import CardGrafik2 from "./components/Cards/CardGrafik2";
-import CardCamera2 from "./components/Cards/CardCamera2";
->>>>>>> f01fa68a58ebaa121187c1c5b3c3767359b7a77d
-
+import CardCamera2 from "./components/Cards/CardCamera2"
 
 function App() {
   return (
-<<<<<<< HEAD
-    <Layouts>
-      <SidebarMenu />
-      <RoutesPage />
-    </Layouts>
-  );
-=======
     <QueryClientProvider client={queryClient}>
       <Layouts>
         <SidebarMenu />
@@ -44,7 +28,6 @@ function App() {
     </QueryClientProvider>
     
   )
->>>>>>> f01fa68a58ebaa121187c1c5b3c3767359b7a77d
 }
 
 export default App;
